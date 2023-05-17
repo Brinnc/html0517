@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판탭메뉴</title>
+    <style>
+        #wrapper {
+            width: 600px;
+            height: 500px;
+            background: yellow;
+            margin: auto;
+        }
+
+        #header {
+            width: 100%;
+            height: 50px;
+            background: red;
+            overflow: hidden;
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        a {
+            width: 195px;
+            margin: 0px;
+            padding: 20px 5px;
+            background: black;
+            color: whitesmoke;
+            font-weight: bold;
+            box-sizing: border-box;
+            display: inline-block;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        //사용자가 qna를 선택하면 문서 내 공지사항과 faq가 가려져야함 
+        function showHide(a, b, c) {
+            let notice = document.getElementById("notice");
+            let qna = document.getElementById("qna");
+            let faq = document.getElementById("faq");
+
+            /*
+            if (n == 1) {
+                notice.style.display = "none"; //공지사항 테이블 안보이도록
+                qna.style.display = "block"; //qna 테이블 보이도록
+                faq.style.display = "none"; //faq 테이블 안보이도록
+            } else if (n == 2) {
+                notice.style.display = "none"; //공지사항 테이블 안보이도록
+                qna.style.display = "none"; //qna 테이블 보이도록
+                faq.style.display = "block"; //faq 테이블 안보이도록
+            } else if (n == 3) {
+                notice.style.display = "block"; //공지사항 테이블 안보이도록
+                qna.style.display = "none"; //qna 테이블 보이도록
+                faq.style.display = "none"; //faq 테이블 안보이도록
+            }
+            */
+
+            notice.style.display = a; //공지사항 테이블 안보이도록
+            qna.style.display = b; //qna 테이블 보이도록
+            faq.style.display = c; //faq 테이블 안보이도록
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <!-- 자바스크립트를 작성할 수 있는 영역
+                1) 스크립트 태그 내 <script>
+                2) onClick과 같은 이벤트핸들러 내 
+                3) a href="javascript:" 내 
+            -->
+            <a href="javascript:showHide('block', 'none', 'none')">공지사항</a>
+            <a href="javascript:showHide('none', 'block', 'none')">QnA</a>
+            <a href="javascript:showHide('none', 'none', 'block')">FAQ</a>
+        </div>
+        <div id="content">
+            <!-- 공지사항 테이블 -->
+            <table width="100%" border="1px" id="notice">
+                <tr>
+                    <td colspan="4" align="center">공지사항</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                </tr>
+            </table>
+
+            <!-- qna 테이블 -->
+            <table width="100%" border="1px" style="display: none;" id="qna">
+                <tr>
+                    <td colspan="4" align="center">QnA</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                </tr>
+            </table>
+
+            <!-- faq 테이블 -->
+            <table width="100%" border="1px" style="display: none;" id="faq">
+                <tr>
+                    <td colspan="4" align="center">FAQ</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                </tr>
+                <tr>
+                    <td>No</td>
+                    <td>제목</td>
+                    <td>작성자</td>
+                    <td>작성일</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

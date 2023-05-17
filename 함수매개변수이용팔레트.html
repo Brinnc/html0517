@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수매개변수이용팔레트</title>
+    <style>
+        #wrapper {
+            width: 700px;
+            height: 500px;
+            margin: auto;
+            border: 3px solid black;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background: white;
+            text-align: center;
+        }
+
+        #header button {
+            width: 94px;
+            height: 94px;
+            border: 2px solid whitesmoke;
+            
+        }
+
+        #content {
+            width: 100%;
+            height: 400px;
+            background: gray;
+        }
+    </style>
+    <script>
+        function setColor(c){
+            //content 내의 배경 스타일을 빨강으로 변경
+            let content=document.getElementById("content");
+            content.style.background=c;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <button style="background: red;" onClick="setColor('red')">빨</button>
+            <button style="background: orange;" onClick="setColor('orange')">주</button>
+            <button style="background: yellow;" onClick="setColor('yellow')">노</button>
+            <button style="background: green;" onClick="setColor('green')">초</button>
+            <button style="background: blue;" onClick="setColor('blue')">파</button>
+            <button style="background: navy;" onClick="setColor('navy')">남</button>
+            <button style="background: purple;" onClick="setColor('purple')">보</button>
+        </div>
+        <div id="content"></div>
+    </div>
+</body>
+
+</html>

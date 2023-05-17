@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수매개변수이용팔레트</title>
+    <style>
+        #wrapper{
+            width: 600px;
+            height: 500px;
+            background: black;
+            margin: auto;
+        }
+
+        #header{
+            width: 100%;
+            height: 100px;
+            background: whitesmoke;
+            text-align: center;
+        }
+        #header img{
+            width: 48px;
+            height: 48px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        #content{
+            width: 100%;
+            height: 400px;
+        }
+        #content img{
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+    <script>
+        function rollOver(n){
+            //문서 내의 pic이라는 이미지 요소의 src를 변경
+            document.getElementById("pic").src="../images/m"+n+".jpg";
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <img onMouseOver="rollOver(1)" src="../images/m1.jpg">
+            <img onMouseOver="rollOver(2)" src="../images/m2.jpg">
+            <img onMouseOver="rollOver(3)" src="../images/m3.jpg">
+            <img onMouseOver="rollOver(4)" src="../images/m4.jpg">
+            <img onMouseOver="rollOver(5)" src="../images/m5.jpg">
+            <img onMouseOver="rollOver(6)" src="../images/m6.jpg">
+            <img onMouseOver="rollOver(7)" src="../images/m7.jpg">
+            <img onMouseOver="rollOver(8)" src="../images/m8.jpg">
+            <img onMouseOver="rollOver(9)" src="../images/m9.jpg">
+            <img onMouseOver="rollOver(10)" src="../images/m10.jpg">
+        </div>
+        <div id="content">
+            <img src="../images/m1.jpg" id="pic">
+        </div>
+    </div>
+</body>
+</html>
